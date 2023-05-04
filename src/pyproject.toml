@@ -7,6 +7,20 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
+fastapi = "^0.95.1"
+uvicorn = "^0.22.0"
+sqlalchemy = "^2.0.12"
+alembic = "^1.10.4"
+decouple = "^0.0.7"
+passlib = "^1.7.4"
+bcrypt = "^4.0.1"
+python-jose = {extras = ["cryptography"], version = "^3.3.0"}
+emails = "^0.6"
+pytest = "^7.3.1"
+pytest-asyncio = "^0.21.0"
+pytest-factoryboy = "^2.5.1"
+asyncpg = "^0.27.0"
+httpx = "^0.24.0"
 
 
 [build-system]
