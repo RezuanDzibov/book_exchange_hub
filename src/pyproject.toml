@@ -22,6 +22,7 @@ pytest-factoryboy = "^2.5.1"
 asyncpg = "^0.27.0"
 httpx = "^0.24.0"
 flake8 = "^6.0.0"
+python-dotenv = "^1.0.0"
 
 
 [build-system]
