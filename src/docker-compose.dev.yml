@@ -15,8 +15,9 @@ services:
     expose:
       - ${POSTGRES_PORT}
   api:
-    container_name: apo
-    depends_on: db
+    container_name: api
+    depends_on:
+      - db
     env_file:
       - .env
     restart: always
