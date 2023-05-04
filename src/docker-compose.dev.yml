@@ -1,0 +1,29 @@
+services:
+  db:
+    container_name: postgres
+    env_file:
+      - .env
+    restart: always
+    image: postgres:15.2
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_PORT: ${POSTGRES_PORT}
+    expose:
+      - ${POSTGRES_PORT}
+  api:
+    container_name: apo
+    depends_on: db
+    env_file:
+      - .env
+    restart: always
+    build: .
+    command: bash -c "cd app && uvicorn main:app --host 0.0.0.0 --port 8000"
+    ports:
+      - 8000:8000
+
+volumes:
+  postgres_data:
