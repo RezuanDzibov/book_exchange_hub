@@ -1,4 +1,4 @@
-FROM python:3.11-slim
+FROM python:3.11.3-slim
 
 RUN apt update \
     && apt install python3 netcat curl -y \
