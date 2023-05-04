@@ -1,6 +1,10 @@
 from fastapi import FastAPI
 
-app = FastAPI(title="Book Exchange Hub")
+from core.settings import get_settings
+
+settings = get_settings()
+
+app = FastAPI(title=settings.PROJECT_NAME)
 
 
 @app.get("/healthcheck")
