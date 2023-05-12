@@ -4,7 +4,7 @@ from typing import List
 from sqlalchemy import Column, String, Boolean, DATETIME
 from sqlalchemy.orm import Mapped, relationship
 
-from src.app.core.models import PKUUIDMixin, Base
+from core.models import PKUUIDMixin, Base
 
 
 class BaseUser:

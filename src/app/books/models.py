@@ -5,9 +5,9 @@ from sqlalchemy import String, ForeignKey, Enum, Table, Column, Boolean, DATETIM
 from sqlalchemy.orm import relationship, Mapped, mapped_column
 from sqlalchemy.dialects.postgresql import UUID
 
-from src.app.core.models import Base, PKUUIDMixin, PositiveInteger
-from src.app.users.models import User
-from src.app.books.enums import ConditionEnum, BookExchangeStatus
+from core.models import Base, PKUUIDMixin, PositiveInteger
+from users.models import User
+from books.enums import ConditionEnum, BookExchangeStatus
 
 
 user_book_mtm_book_request_association_table = Table(
