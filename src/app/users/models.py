@@ -1,6 +1,8 @@
 from datetime import datetime
+from typing import List
 
 from sqlalchemy import Column, String, Boolean, DATETIME
+from sqlalchemy.orm import Mapped, relationship
 
 from src.app.core.models import PKUUIDMixin, Base
 
@@ -18,3 +20,4 @@ class User(PKUUIDMixin, Base):
     first_name = Column(String(length=255))
     last_name = Column(String(length=255))
     birth_date = Column(String, nullable=True)
+    books: Mapped[List["Book"]] = relationship(back_populates="user")
