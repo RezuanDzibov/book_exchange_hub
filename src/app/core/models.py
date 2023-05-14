@@ -22,7 +22,7 @@ class PositiveInteger(TypeDecorator):
         return value
 
 
-@as_declarative
+@as_declarative()
 class Base:
     id: UUID | PositiveInteger
     __name__: str
